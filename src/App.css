@@ -1,0 +1,191 @@
+/* .App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.App{
+  text-align: left;
+}
+
+.App li{
+  display: inline;
+  padding: 1%;
+}
+
+.App ul{
+  background-color: black;
+  padding: 1%;
+}
+
+.App .list-heading{
+text-align: center;
+}
+
+.App .active:hover{
+  color: yellow;
+}
+
+.App .film-list{
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.App .film-item{
+  margin-left: 15%;
+}
+
+.App img{
+  height: 320px;
+  width: 400px;
+}
+
+.App .card{
+  width: fit-content;
+}
+
+.App h3{
+  text-align: center;
+}
+
+.App p{
+  text-align: center;
+}
+
+.btn{
+  background-color: black;
+}
+
+.App button{
+  background-color: black;
+  color: white;
+  border: none;
+}
+
+.App a{
+  text-decoration: none;
+  color: white;
+}
+
+.navigation-list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  background-color: #f2f2f2;
+}
+
+.navigation-list li {
+  margin-right: 10px;
+}
+
+.navigation-list li:last-child {
+  margin-right: 0;
+}
+
+.navigation-list li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.navigation-list li a.active {
+  font-weight: bold;
+}
+
+.film-search{
+  margin: 10px;
+  margin-left: 43%;
+}
+
+.list-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.film-search input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup img{ width: 100%;}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {color: #06D85F;}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
