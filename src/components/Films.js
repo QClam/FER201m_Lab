@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Films as filmData } from '../shared/ListOfFilms';
-
+import { nfc } from 'unorm';
 
 export default function Films(){
   const [searchQuery, setSearchQuery] = useState('');
@@ -12,7 +12,7 @@ export default function Films(){
     setSearchQuery(query);
   
     const filtered = filmData.filter(film =>
-      film.title.toLowerCase().includes(query.toLowerCase())
+      nfc(film.title.toLowerCase()).includes(nfc(query.toLowerCase()))
     );
     setFilteredFilms(filtered);
   };
@@ -32,7 +32,7 @@ export default function Films(){
         {filteredFilms.length === 0 ? (
           <p>No films found.</p>
         ) : (
-          filmData.map(film => (
+          filteredFilms.map(film => (
             <div className="film-item" key={film.id}>
               <div className="card">
                 <img src={film.img} alt={film.title} />
